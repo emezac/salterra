@@ -1,0 +1,94 @@
+entity Profile {
+    id UUID,
+    name String required,
+    auth0UserId String required,
+    socialNetwork String,
+    profileImage ImageBlob,
+    suspended Boolean,
+    suspendedCount Integer,
+    banned Boolean,
+    aclSetup String,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity ProfileGameStatus {
+    lastVisitedRoom Integer,
+    lastPrizeOwned Integer
+}
+
+entity Card {
+    id Integer,
+    thumbnaiImage ImageBlob,
+    highresImage ImageBlob,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Dungeon {
+ id Integer,
+ startDate Instant,
+ endDate Instant
+}
+
+entity DungeonFloors {
+  dgId Integer,
+  floorId Integer,
+}
+
+entity Floor {
+ id Integer
+}
+
+entity FloorRooms {
+  floorId Integer,
+  roomId Integer
+}
+
+entity Prize {
+  id Integer,
+  prizeName String required
+}
+
+entity Room {
+ id Integer,
+ introText String,
+ haveGatewayDoor Boolean,
+ gatewayDoor Integer
+}
+
+entity Challenge {
+    id Integer,
+    successText String required,
+    failureText String required,
+    challengeText String required,
+    challengeName TypesOfChallenge,
+    difficulty Difficulty
+}
+
+enum TypesOfChallenge {
+    STRONG, SOURCEROUS, SWIFT
+}
+
+enum Difficulty {
+    LOW, MEDIUM, HIGH
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    ProfileGameStatus to Dungeon,
+    Dungeon to DungeonFloors,
+    Floor to DungeonFloors,
+    Floor to FloorRooms,
+    Room to FloorRooms,
+    Room to Challenge,
+    Profile to Prize,
+    Card to Prize,
+    Room to Prize
+}
+
+relationship OneToOne {
+	Profile to ProfileGameStatus
+}
