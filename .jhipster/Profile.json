@@ -1,0 +1,74 @@
+{
+  "applications": "*",
+  "changelogDate": "20221107223052",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "profile",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "auth0UserId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "socialNetwork",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profileImage",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "suspended",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "suspendedCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "banned",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "aclSetup",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "deletedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Profile",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "prize",
+      "otherEntityRelationshipName": "profile",
+      "relationshipName": "prize",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

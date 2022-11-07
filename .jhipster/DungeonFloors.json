@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "changelogDate": "20221107223055",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "dungeon_floors",
+  "fields": [
+    {
+      "fieldName": "dgId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "floorId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "DungeonFloors",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "dungeon",
+      "otherEntityRelationshipName": "dungeonFloors",
+      "relationshipName": "dungeon",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "floor",
+      "otherEntityRelationshipName": "dungeonFloors",
+      "relationshipName": "floor",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
