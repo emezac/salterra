@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20221108034348",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "floor_rooms",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "FloorRooms",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "floor",
+      "otherEntityRelationshipName": "floorRooms",
+      "relationshipName": "floor",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "floorRooms",
+      "relationshipName": "room",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
