@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20221108155020",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "profile_game_status",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "moveDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastRoomVisited",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ProfileGameStatus",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "profile",
+      "otherEntityRelationshipName": "profileGameStatus",
+      "ownerSide": true,
+      "relationshipName": "profile",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "dungeon",
+      "otherEntityRelationshipName": "profileGameStatus",
+      "relationshipName": "dungeon",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
