@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110060508",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "game_status",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "moveDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastRoomVisited",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GameStatus",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "profile",
+      "otherEntityRelationshipName": "gameStatus",
+      "ownerSide": true,
+      "relationshipName": "profile",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "move",
+      "otherEntityRelationshipName": "gameStatus",
+      "relationshipName": "move",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
