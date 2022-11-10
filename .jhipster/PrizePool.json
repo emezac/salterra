@@ -1,0 +1,22 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110035528",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "prize_pool",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PrizePool",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "prize",
+      "otherEntityRelationshipName": "prizePool",
+      "relationshipName": "prize",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

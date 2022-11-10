@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110035521",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "move",
+  "fields": [
+    {
+      "fieldName": "moveNumber",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Move",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "gameStatus",
+      "otherEntityRelationshipName": "move",
+      "relationshipName": "move",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "challenge",
+      "otherEntityRelationshipName": "challenge",
+      "ownerSide": false,
+      "relationshipName": "move",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}
