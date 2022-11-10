@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110145822",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "choice",
+  "fields": [
+    {
+      "fieldName": "choiceName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "text",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Choice",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "option",
+      "otherEntityRelationshipName": "choice",
+      "relationshipName": "option",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "choice",
+      "relationshipName": "activity",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

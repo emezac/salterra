@@ -11,7 +11,26 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145817_added_entity_Move.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145818_added_entity_Prize.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145819_added_entity_Profile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145820_added_entity_Card.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145821_added_entity_Room.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145822_added_entity_Choice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145823_added_entity_Option.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145824_added_entity_PrizePool.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145825_added_entity_Activity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145826_added_entity_GameStatus.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145827_added_entity_ActivityMoves.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20221110145817_added_entity_constraints_Move.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145818_added_entity_constraints_Prize.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145822_added_entity_constraints_Choice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145823_added_entity_constraints_Option.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145824_added_entity_constraints_PrizePool.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145825_added_entity_constraints_Activity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145826_added_entity_constraints_GameStatus.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20221110145827_added_entity_constraints_ActivityMoves.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

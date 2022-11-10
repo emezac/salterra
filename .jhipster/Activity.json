@@ -1,0 +1,86 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110145825",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "activity",
+  "fields": [
+    {
+      "fieldName": "introText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "successText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "failureText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "skipText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "challengeName",
+      "fieldType": "TypesOfChallenge",
+      "fieldValues": "STRONG,SOURCEROUS,SWIFT"
+    },
+    {
+      "fieldName": "difficulty",
+      "fieldType": "Difficulty",
+      "fieldValues": "LOW,MEDIUM,HIGH"
+    },
+    {
+      "fieldName": "prizeNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "challangeRating",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sacrificeNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "skipResult",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Activity",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "choice",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "choice",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "prizePool",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "prizePool",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "activityMoves",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "activityMoves",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "room",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
