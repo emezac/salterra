@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110064900",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "option",
+  "fields": [
+    {
+      "fieldName": "optionName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Option",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "choice",
+      "otherEntityRelationshipName": "option",
+      "relationshipName": "choice",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
