@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110163551",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "room_connection",
+  "fields": [
+    {
+      "fieldName": "fromId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "toId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RoomConnection",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "roomConnection",
+      "relationshipName": "room",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

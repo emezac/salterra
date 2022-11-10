@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20221110163553",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "prize_pool",
+  "fields": [
+    {
+      "fieldName": "prizeName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PrizePool",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "prize",
+      "otherEntityRelationshipName": "prizePool",
+      "relationshipName": "prize",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "prizePool",
+      "relationshipName": "activity",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
