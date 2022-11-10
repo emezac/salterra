@@ -1,0 +1,101 @@
+enum TypesOfChallenge {
+    STRONG, SOURCEROUS, SWIFT
+}
+
+enum Difficulty {
+    LOW, MEDIUM, HIGH
+}
+
+entity Move {
+	moveNumber String
+}
+
+entity Prize {
+	options String
+}
+
+entity Profile {
+    id UUID,
+    name String required,
+    auth0UserId String required,
+    socialNetwork String,
+    profileImage ImageBlob,
+    suspended Boolean,
+    suspendedCount Integer,
+    banned Boolean,
+    aclSetup String,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Card {
+    id Long,
+    thumbnaiImage ImageBlob,
+    highresImage ImageBlob,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Room {
+ id Long,
+ introText String,
+ haveGatewayDoor Boolean,
+ gatewayDoor Integer
+}
+
+enum Choice {
+     MOVE, PLAY, SKYP
+}
+
+entity ChallengeOption {
+	optionName String,
+    option String
+}
+
+entity PrizePool {
+	prizeName String
+}
+
+entity Activity {
+    introText String required,
+    successText String required,
+    failureText String required,
+    skipText String,
+    typeChallenge Choice,
+    challengeName TypesOfChallenge,
+    difficulty Difficulty,    
+    //prizeNumber String,
+    challangeRating Difficulty,
+    sacrificeNumber String,
+    skipResult String
+}
+
+entity GameStatus {
+ id Long,
+ moveDate Instant,
+ lastRoomVisited Long
+}
+
+entity ActivityMoves {
+  moveDate Instant
+}
+
+relationship OneToOne {
+  GameStatus to Profile
+}
+
+relationship OneToMany {
+    Room to Activity,
+    Activity to ChallengeOption,
+    Activity to PrizePool,
+    Activity to ActivityMoves,
+    Move to ActivityMoves,
+    Profile to Prize,
+    Card to Prize,
+    Room to Prize,
+    GameStatus to Move,
+	Choice  to Option,
+    PrizePool to Prize
+}
