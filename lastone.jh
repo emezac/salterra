@@ -1,0 +1,141 @@
+enum TypesOfChallenge {
+    STRONG, SOURCEROUS, SWIFT
+}
+
+enum Difficulty {
+    LOW, MEDIUM, HIGH
+}
+
+entity Move {
+	moveNumber String
+}
+
+entity Prize {
+	options String
+}
+
+entity Profile {
+    id UUID,
+    name String required,
+    auth0UserId String required,
+    socialNetwork String,
+    profileImage ImageBlob,
+    suspended Boolean,
+    suspendedCount Integer,
+    banned Boolean,
+    aclSetup String,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Card {
+    id Long,
+    thumbnaiImage ImageBlob,
+    highresImage ImageBlob,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Room {
+ id Long,
+ introText String,
+ haveGatewayDoor Boolean,
+ gatewayDoor Integer
+}
+
+entity RoomConnection {
+ room1 Long,
+ room2 Long,
+ room3 Long,
+ room4 Long,
+ room5 Long,
+ room6 Long,
+ room7 Long,
+ room8 Long,
+ room9 Long,
+ room10 Long,
+ room11 Long,
+ room12 Long,
+ room13 Long,
+ room14 Long,
+ room15 Long,
+ room16 Long,
+ room16 Long,
+ room17 Long,
+ room18 Long,
+ room19 Long,
+ room20 Long,
+ room21 Long,
+ room22 Long,
+ room23 Long,
+ room24 Long,
+ room25 Long,
+ room26 Long,
+ room27 Long,
+ room28 Long,
+ room29 Long,
+ room30 Long,
+ room31 Long,
+ room32 Long,
+ room33 Long,
+ room34 Long,
+ room35 Long
+}
+
+
+enum Choice {
+     MOVE, PLAY, SKYP
+}
+
+entity ChallengeOption {
+	optionName String,
+    option String
+}
+
+entity PrizePool {
+	prizeName String
+}
+
+entity Activity {
+    introText String required,
+    successText String required,
+    failureText String required,
+    skipText String,
+    typeChallenge Choice,
+    challengeName TypesOfChallenge,
+    difficulty Difficulty,    
+    //prizeNumber String,
+    challangeRating Difficulty,
+    sacrificeNumber String,
+    skipResult String
+}
+
+entity GameStatus {
+ id Long,
+ moveDate Instant,
+ lastRoomVisited Long
+}
+
+entity ActivityMoves {
+  moveDate Instant
+}
+
+relationship OneToOne {
+  GameStatus to Profile
+}
+
+relationship OneToMany {
+    Room to Activity,
+    Activity to ChallengeOption,
+    Activity to PrizePool,
+    Activity to ActivityMoves,
+    Move to ActivityMoves,
+    Profile to Prize,
+    Card to Prize,
+    Room to Prize,
+    Room to RoomConnection,
+    GameStatus to Move,
+    PrizePool to Prize
+}
