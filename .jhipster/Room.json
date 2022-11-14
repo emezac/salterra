@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20221114173259",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "room",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "introText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "haveGatewayDoor",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "gatewayDoor",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Room",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "activity",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "prize",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "prize",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "roomConnection",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "roomConnection",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
