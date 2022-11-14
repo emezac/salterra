@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity RoomConnection.
+    -->
+    <changeSet id="20221114172344-1" author="jhipster">
+        <createTable tableName="room_connection">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="room_1" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_2" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_3" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_4" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_5" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_6" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_7" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_8" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_9" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_10" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_11" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_12" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_13" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_14" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_15" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_16" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_17" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_18" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_19" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_20" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_21" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_22" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_23" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_24" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_25" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_26" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_27" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_28" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_29" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_30" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_31" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_32" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_33" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_34" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_35" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="room_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20221114172344-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/room_connection.csv"
+                  separator=";"
+                  tableName="room_connection"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="room_1" type="numeric"/>
+            <column name="room_2" type="numeric"/>
+            <column name="room_3" type="numeric"/>
+            <column name="room_4" type="numeric"/>
+            <column name="room_5" type="numeric"/>
+            <column name="room_6" type="numeric"/>
+            <column name="room_7" type="numeric"/>
+            <column name="room_8" type="numeric"/>
+            <column name="room_9" type="numeric"/>
+            <column name="room_10" type="numeric"/>
+            <column name="room_11" type="numeric"/>
+            <column name="room_12" type="numeric"/>
+            <column name="room_13" type="numeric"/>
+            <column name="room_14" type="numeric"/>
+            <column name="room_15" type="numeric"/>
+            <column name="room_16" type="numeric"/>
+            <column name="room_17" type="numeric"/>
+            <column name="room_18" type="numeric"/>
+            <column name="room_19" type="numeric"/>
+            <column name="room_20" type="numeric"/>
+            <column name="room_21" type="numeric"/>
+            <column name="room_22" type="numeric"/>
+            <column name="room_23" type="numeric"/>
+            <column name="room_24" type="numeric"/>
+            <column name="room_25" type="numeric"/>
+            <column name="room_26" type="numeric"/>
+            <column name="room_27" type="numeric"/>
+            <column name="room_28" type="numeric"/>
+            <column name="room_29" type="numeric"/>
+            <column name="room_30" type="numeric"/>
+            <column name="room_31" type="numeric"/>
+            <column name="room_32" type="numeric"/>
+            <column name="room_33" type="numeric"/>
+            <column name="room_34" type="numeric"/>
+            <column name="room_35" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

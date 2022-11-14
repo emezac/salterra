@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20221114172345",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "challenge_option",
+  "fields": [
+    {
+      "fieldName": "optionName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "option",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ChallengeOption",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "challengeOption",
+      "relationshipName": "activity",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
