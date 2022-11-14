@@ -1,0 +1,140 @@
+enum TypesOfChallenge {
+    STRONG, SOURCEROUS, SWIFT
+}
+
+enum Difficulty {
+    LOW, MEDIUM, HIGH
+}
+
+entity Move {
+	moveNumber String
+}
+
+entity Prize {
+	options String
+}
+
+entity Profile {
+    id UUID,
+    name String required,
+    auth0UserId String required,
+    socialNetwork String,
+    profileImage ImageBlob,
+    suspended Boolean,
+    suspendedCount Integer,
+    banned Boolean,
+    aclSetup String,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Card {
+    id Long,
+    thumbnaiImage ImageBlob,
+    highresImage ImageBlob,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Room {
+ id Long,
+ introText String,
+ haveGatewayDoor Boolean,
+ gatewayDoor Integer
+}
+
+entity RoomConnection {
+ r1 Long,
+ r2 Long,
+ r3 Long,
+ r4 Long,
+ r5 Long,
+ r6 Long,
+ r7 Long,
+ r8 Long,
+ r9 Long,
+ r10 Long,
+ r11 Long,
+ r12 Long,
+ r13 Long,
+ r14 Long,
+ r15 Long,
+ r16 Long,
+ r17 Long,
+ r18 Long,
+ r19 Long,
+ r20 Long,
+ r21 Long,
+ r22 Long,
+ r23 Long,
+ r24 Long,
+ r25 Long,
+ r26 Long,
+ r27 Long,
+ r28 Long,
+ r29 Long,
+ r30 Long,
+ r31 Long,
+ r32 Long,
+ r33 Long,
+ r34 Long,
+ r35 Long
+}
+
+
+enum Choice {
+     MOVE, PLAY, SKYP
+}
+
+entity ChallengeOption {
+	optionName String,
+    option String
+}
+
+entity PrizePool {
+	prizeName String
+}
+
+entity Activity {
+    introText String required,
+    successText String required,
+    failureText String required,
+    skipText String,
+    typeChallenge Choice,
+    challengeName TypesOfChallenge,
+    difficulty Difficulty,    
+    //prizeNumber String,
+    challangeRating Difficulty,
+    sacrificeNumber String,
+    skipResult String
+}
+
+entity GameStatus {
+ id Long,
+ moveDate Instant,
+ lastRoomVisited Long
+}
+
+entity ActivityMoves {
+  moveDate Instant
+}
+
+relationship OneToOne {
+  GameStatus to Profile
+}
+
+relationship OneToMany {
+    Room to Activity,
+    Activity to ChallengeOption,
+    Activity to PrizePool,
+    Activity to ActivityMoves,
+    Move to ActivityMoves,
+    Profile to Prize,
+    Card to Prize,
+    Room to Prize,
+    Room to RoomConnection,
+    GameStatus to Move,
+    PrizePool to Prize
+}
