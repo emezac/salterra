@@ -1,0 +1,163 @@
+{
+  "applications": "*",
+  "changelogDate": "20221115061629",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "room_connection",
+  "fields": [
+    {
+      "fieldName": "r1",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r2",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r3",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r4",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r5",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r6",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r7",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r8",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r9",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r10",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r11",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r12",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r13",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r14",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r15",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r16",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r17",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r18",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r19",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r20",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r21",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r22",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r23",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r24",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r25",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r26",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r27",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r28",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r29",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r30",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r31",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r32",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r33",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r34",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "r35",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RoomConnection",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "roomConnection",
+      "relationshipName": "room",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
