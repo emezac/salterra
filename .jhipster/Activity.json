@@ -1,0 +1,106 @@
+{
+  "applications": "*",
+  "changelogDate": "20221116074400",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "activity",
+  "fields": [
+    {
+      "fieldName": "successText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "failureText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "skipText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "challangeDifficulty",
+      "fieldType": "Difficulty",
+      "fieldValues": "EASY,MEDIUM,HARD"
+    },
+    {
+      "fieldName": "challengeType",
+      "fieldType": "TypeOfChallenge",
+      "fieldValues": "STRONG,SOURCEROUS,SWIFT"
+    },
+    {
+      "fieldName": "failureResult",
+      "fieldType": "FailureResult",
+      "fieldValues": "ONE_MOVE,NULL,TWO_MOVES,R_MINUS"
+    },
+    {
+      "fieldName": "successResult",
+      "fieldType": "SuccessResult",
+      "fieldValues": "ONE_MOVE,ONE_B,ONE_R"
+    },
+    {
+      "fieldName": "skipResult",
+      "fieldType": "SkipResult",
+      "fieldValues": "ONE_MOVE,NULL"
+    },
+    {
+      "fieldName": "sW",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "e",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nW",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "n",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sE",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "s",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nE",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "w",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Activity",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "choices",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "choices",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "activityMoves",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "activityMoves",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "activity",
+      "relationshipName": "room",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
