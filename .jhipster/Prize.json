@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20221116165951",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "prize",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Prize",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "profile",
+      "otherEntityRelationshipName": "prize",
+      "relationshipName": "profile",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "card",
+      "otherEntityRelationshipName": "prize",
+      "relationshipName": "card",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "prize",
+      "relationshipName": "room",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

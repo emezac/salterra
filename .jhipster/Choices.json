@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20221116165955",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "choices",
+  "fields": [
+    {
+      "fieldName": "text",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "Action",
+      "fieldValues": "MOVE,PLAY,SKYP"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Choices",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "activityMoves",
+      "otherEntityRelationshipName": "choices",
+      "relationshipName": "activityMoves",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
