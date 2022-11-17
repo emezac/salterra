@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20221117205242",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "activity_moves",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ActivityMoves",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "choices",
+      "otherEntityRelationshipName": "activityMoves",
+      "ownerSide": true,
+      "relationshipName": "choices",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "move",
+      "otherEntityRelationshipName": "activityMoves",
+      "relationshipName": "move",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "activityMoves",
+      "relationshipName": "activity",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
