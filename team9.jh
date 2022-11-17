@@ -1,0 +1,119 @@
+enum Difficulty {
+    LOW, MEDIUM, HIGH
+}
+
+entity Move {
+	moveNumber String,
+    moveDate Instant
+}
+
+entity Prize {
+	description String
+}
+
+entity Profile {
+    id UUID,
+    name String required,
+    auth0UserId String required,
+    socialNetwork String,
+    profileImage ImageBlob,
+    suspended Boolean,
+    suspendedCount Integer,
+    banned Boolean,
+    aclSetup String,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Card {
+    id Long,
+    thumbnaiImage ImageBlob,
+    highresImage ImageBlob,
+    createdAt Instant,
+    updatedAt Instant,
+    deletedAt Instant
+}
+
+entity Room {
+  introText String required
+}
+
+enum Choice {
+     MOVE, PLAY, SKYP
+}
+
+enum FailureResult {
+    ONE_MOVE, NULL, TWO_MOVES, R_MINUS
+}
+
+enum SuccessResult {
+    ONE_MOVE, ONE_B, ONE_R
+}
+
+enum SkipResult {
+ ONE_MOVE, NULL
+}
+
+enum Action {
+     MOVE, PLAY, SKYP
+}
+
+enum TypeOfChallenge {
+    STRONG, SOURCEROUS, SWIFT
+}
+
+enum Difficulty {
+    EASY, MEDIUM, HARD
+}
+
+entity Choices {
+     text String,
+     action Action
+}
+
+entity Activity {
+    successText String required,
+    failureText String required,
+    skipText String,
+    challangeDifficulty Difficulty,
+    challengeType TypeOfChallenge, 
+    failureResult FailureResult,
+    successResult SuccessResult,
+    skipResult SkipResult,
+    SW String,
+    E String,
+    NW String,
+    N String,
+    SE String,
+    S String,
+    NE String,
+    W String
+}
+
+entity GameStatus {
+ id Long,
+ moveDate Instant,
+ lastRoomVisited Long
+}
+
+entity ActivityMoves {
+}
+
+relationship OneToOne {
+  GameStatus to Profile
+}
+
+relationship ManyToMany {
+  ActivityMoves to Choices,
+  Room to Prize
+}
+
+relationship OneToMany {
+    Room to Activity,   
+    Move to ActivityMoves,
+    Activity to ActivityMoves,
+    Profile to Prize,
+    Card to Prize,
+    GameStatus to Move
+}
