@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20221125060422",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "game_result",
+  "fields": [
+    {
+      "fieldName": "won",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lost",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GameResult",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "myUser",
+      "otherEntityRelationshipName": "gameResult",
+      "relationshipName": "myUser",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
