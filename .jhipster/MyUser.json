@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20221125060421",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "my_user",
+  "fields": [
+    {
+      "fieldName": "walletAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "MyUser",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "gameResult",
+      "otherEntityRelationshipName": "myUser",
+      "relationshipName": "gameResult",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
