@@ -1,0 +1,15 @@
+entity MyUser {
+	walletAddress String,
+    createdAt Instant,
+    updatedAt Instant
+}
+
+entity GameResult {
+	won Boolean,
+    lost Boolean,
+    createdAt Instant
+}
+
+relationship OneToMany {
+    MyUser to GameResult
+}
