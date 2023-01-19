@@ -1,0 +1,42 @@
+entity User {
+	fullName String,
+	email String,
+    password String,
+    role String,
+    polygonAddress String,
+    publicUrl String,
+}
+
+entity Course {
+	name String,
+    tags String,
+    description String,
+    image Blob,
+    imageBarCode Blob,
+	certificateImageTemplate Blob
+}
+
+entity Certificate {
+	tokenId String
+}
+
+entity Event {
+	name String,
+	startDate Instant,
+	endDate Instant,
+    eventType EventType
+}
+
+enum EventType {
+    TWITTER, DISCORD, CERTIFICATE
+}
+
+relationship ManyToMany {
+	User to Event
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    User to Course,
+    Course to Certificate
+}
