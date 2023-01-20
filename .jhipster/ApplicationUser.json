@@ -1,0 +1,54 @@
+{
+  "applications": "*",
+  "changelogDate": "20230120194524",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "application_user",
+  "fields": [
+    {
+      "fieldName": "fullName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "polygonAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publicUrl",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ApplicationUser",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "course",
+      "otherEntityRelationshipName": "applicationUser",
+      "relationshipName": "course",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "event",
+      "otherEntityRelationshipName": "applicationUser",
+      "ownerSide": true,
+      "relationshipName": "event",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

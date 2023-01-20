@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20230120194527",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "event",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "eventType",
+      "fieldType": "EventType",
+      "fieldValues": "TWITTER,DISCORD,CERTIFICATE"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Event",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "event",
+      "ownerSide": false,
+      "relationshipName": "applicationUser",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}
